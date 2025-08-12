@@ -63,9 +63,9 @@ should return 'johnsmith@example.com'.
 Complete the exercise in the space below:
 */
 function generateEmail(name, domain) {
-    return `${domain}`;
+    return `${name} ${domain}`;
 }
-console.log('Exercise 4 Result:', generateEmail("melabreu", "melabreu@email.com"));
+console.log('Exercise 4 Result:', generateEmail("melabreu", "email.com"));
 
 /*
 Exercise 5: greetUser()
@@ -160,9 +160,16 @@ Example: basicCalculator(10, 5, 'subtract') should return 5.
 
 Complete the exercise in the space below:
 */
-const basicCalculator = (num1, num2, operation) => {
+const basicCalculator = (a, b, operation) => {
     const operations = {
-
-}
+        if ( === 'add') {
+            return a + b;
+        } else if (operation === 'subtract') {
+            return a - b;
+        } else if (operation === 'multiply') {
+            return a * b;
+        } else if (operation === 'divide') {
+            return a / b;
+        }
 }
 console.log('Exercise 9 Result:', basicCalculator(10, 5, "subtract"));
