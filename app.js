@@ -25,7 +25,7 @@ Example: isAdult(21) should return 'Adult'.
 Complete the exercise in the space below:
 */
 function isAdult(age) {
-    if (age => 18) {
+    if (age >= 18) {
         return 'Adult';
     } else {
         return 'Minor';
@@ -63,7 +63,7 @@ should return 'johnsmith@example.com'.
 Complete the exercise in the space below:
 */
 function generateEmail(name, domain) {
-    return `${name} ${domain}`;
+    return `${name}@${domain}`;
 }
 console.log('Exercise 4 Result:', generateEmail("melabreu", "email.com"));
 
@@ -161,15 +161,16 @@ Example: basicCalculator(10, 5, 'subtract') should return 5.
 Complete the exercise in the space below:
 */
 const basicCalculator = (a, b, operation) => {
-    const operations = {
-        if ( === 'add') {
-            return a + b;
-        } else if (operation === 'subtract') {
-            return a - b;
-        } else if (operation === 'multiply') {
-            return a * b;
-        } else if (operation === 'divide') {
-            return a / b;
-        }
+    if (operation === 'add') {
+        return a + b;
+    } else if (operation === 'subtract') {
+        return a - b;
+    } else if (operation === 'multiply') {
+        return a * b;
+    } else if (operation === 'divide') {
+        return a / b;
+    } else {
+        return 'Invalid';
+    }
 }
 console.log('Exercise 9 Result:', basicCalculator(10, 5, "subtract"));
